@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
 const path = require('path')
- 
+const cpnnection = require('/dbconnection')
 app.use(express.static('./public'))
+ 
 
-app.get('/', function (req, response) {
+app.get('/navbar', (req, response) => {
   response.sendFile(path.join(dirname, '/public/index.html  '))
 })
 
